@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://event-backend-sooty.vercel.app//api',
+    baseURL: import.meta.env.VITE_API_URL || 'https://event-backend-sooty.vercel.app/api',
 });
 
 api.interceptors.request.use((config) => {
